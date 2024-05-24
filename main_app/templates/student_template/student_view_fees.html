@@ -1,0 +1,108 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+{% block custom_css %}
+<style>
+  .university-logo {
+    max-height: 100px; /* Adjust as needed */
+  }
+  .university-info {
+    text-align: center;
+  }
+  .centered {
+    text-align: center;
+  }
+  .student-details {
+    text-align: left;
+    margin: 0 auto; /* Centering the content */
+    max-width: 300px; /* Adjust as needed */
+  }
+  .student-details strong {
+    font-weight: bold;
+  }
+  .fee-statement-table {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  #Fee{
+    color: rgb(0, 0, 0);
+  }
+</style>
+{% endblock custom_css %}
+
+{% block content %}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="centered">
+            <img src="{% static 'dist/img/Graduation-Cup.png' %}" alt="University Logo" class="university-logo mb-4">
+            <div class="university-info">
+                <h3>Machakos Vocational Training Center</h3>
+                <p>Address: 123 University St, City, Country</p>
+                <p>Phone: +123456789, Email: info@university.edu</p>
+            </div>
+            <hr>
+        </div>
+        <div class="row" style="text-align: start;">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td style="padding-right: 80px;">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Course:</strong> Computer Science</p>
+                        <p><strong>Level:</strong> Undergraduate</p>
+                    </td>
+                    <td style="padding-left: 80px;">
+                        <p><strong>School:</strong> Engineering and Technology</p>
+                        <p><strong>Department:</strong> ICT</p>
+                        <p><strong>Session:</strong> 2024/2025</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="fee-statement-table">
+            <h4 id="Fee">Fee Statement</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-05-01</td>
+                        <td>Tuition Payment</td>
+                        <td>$500.00</td>
+                        <td>$49,500.00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-03</td>
+                        <td>Bookstore Purchase</td>
+                        <td>$150.00</td>
+                        <td>$49,350.00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-05</td>
+                        <td>Lab Fee Payment</td>
+                        <td>$75.00</td>
+                        <td>$49,275.00</td>
+                    </tr>
+                    <!-- Add more rows for other transactions -->
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <button class="btn btn-primary d-print-none" onclick="window.print()">Print PDF Statement</button>
+    </div>
+</section>
+{% endblock content %}
+
+{% block custom_js %}
+<script>
+
+</script>
+{% endblock custom_js %}
