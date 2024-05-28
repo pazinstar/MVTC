@@ -34,70 +34,109 @@
 {% block content %}
 
 <section class="content">
-    <div class="container-fluid">
+    <div class="container ">
         <div class="centered">
-            <img src="{% static 'dist/img/Graduation-Cup.png' %}" alt="University Logo" class="university-logo mb-4">
-            <div class="university-info">
+          <div class="university-info">
+            <img src="{% static 'dist/img/Logo.png' %}" alt="University Logo" class="university-logo mb-4">
+           
                 <h3>Machakos Vocational Training Center</h3>
-                <p>Address: 123 University St, City, Country</p>
-                <p>Phone: +123456789, Email: info@university.edu</p>
+                <p>Address: Off Wote Road, Before Katoloni Mkt, Machakos Kenya</p>
+                <p>CELL: 254741 423 751   or  254721 436 111 </p>
+                <P>Email: info@machakosVTC.net</P>
+               <strong><h4 id="Fee">Fee Statement</h4></strong> 
             </div>
             <hr>
         </div>
         <div class="row" style="text-align: start;">
             <table style="margin: 0 auto;">
                 <tr>
-                    <td style="padding-right: 80px;">
+                    <td style="padding-right: 150px;">
                         <p><strong>Name:</strong> John Doe</p>
                         <p><strong>Course:</strong> Computer Science</p>
+                        <p><strong>Term:</strong> semester Jan-July</p>
                         <p><strong>Level:</strong> Undergraduate</p>
                     </td>
-                    <td style="padding-left: 80px;">
+                    <td style="padding-left: 150px;">
+                        <p><strong>REG No.</strong> S09-6758-2023</p>
                         <p><strong>School:</strong> Engineering and Technology</p>
                         <p><strong>Department:</strong> ICT</p>
-                        <p><strong>Session:</strong> 2024/2025</p>
+                        <p><strong>Student:</strong> GSSP</p>
                     </td>
                 </tr>
             </table>
         </div>
-        <hr>
+
         <div class="fee-statement-table">
-            <h4 id="Fee">Fee Statement</h4>
+            
             <table class="table">
                 <thead>
                     <tr>
                         <th>Date</th>
+                        <th>Ref</th>
                         <th>Description</th>
-                        <th>Amount</th>
-                        <th>Balance</th>
+                        <th>Debit (KES)</th>
+                        <th>Credit (KES)</th>
+                        <th>Balance (KES)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>2024-05-01</td>
-                        <td>Tuition Payment</td>
-                        <td>$500.00</td>
-                        <td>$49,500.00</td>
+                        <td>HREXEW01</td>
+                        <td>Standard invoice</td>
+                        <td>50,000.00</td>
+                        <td>0.00</td>
+                        <td>50,000.00</td>
                     </tr>
                     <tr>
                         <td>2024-05-03</td>
-                        <td>Bookstore Purchase</td>
-                        <td>$150.00</td>
-                        <td>$49,350.00</td>
+                        <td>WERT94B2</td>
+                        <td>Kenya commer. bank fees</td>
+                        <td>0.00</td>
+                        <td>20,000.00</td>
+                        <td>30,000.00</td>
                     </tr>
                     <tr>
                         <td>2024-05-05</td>
-                        <td>Lab Fee Payment</td>
-                        <td>$75.00</td>
-                        <td>$49,275.00</td>
+                        <td>BSMDM03</td>
+                        <td>HELB-3465</td>
+                        <td>0.00</td>
+                        <td>4,000.00</td>
+                        <td>26,000.00</td>
                     </tr>
-                    <!-- Add more rows for other transactions -->
+                    <tr>
+                        <td>2024-05-10</td>
+                        <td>NAIBRY04</td>
+                        <td>Nairobi County Government bursary</td>
+                        <td>0.00</td>
+                        <td>10,250.00</td>
+                        <td>15,750.00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-05</td>
+                        <td>TYMDM03</td>
+                        <td>HELB-3465</td>
+                        <td>0.00</td>
+                        <td>20,000.00</td>
+                        <td>-4,250.00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-20</td>
+                        <td>TUERMSD6</td>
+                        <td>Equipment Purchase</td>
+                        <td>1,200.00</td>
+                        <td>0.00</td>
+                        <td><STRong>-3,050.00</STRong></td>
+                    </tr>
+                    
                 </tbody>
             </table>
+            
         </div>
-        <hr>
-        <button class="btn btn-primary d-print-none" onclick="window.print()">Print PDF Statement</button>
-    </div>
+<br>
+        <button style="float: right;" class="btn btn-primary d-print-none" onclick="window.print()">Print PDF Statement</button>
+   
+   <br><br> </div>
 </section>
 {% endblock content %}
 
